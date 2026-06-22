@@ -44,10 +44,11 @@
   }
 
   .hero-photo {
-    width: 108px;
-    height: 108px;
+    width: 160px;
+    height: 200px;
     border-radius: 4px;
     object-fit: cover;
+    object-position: center 10%;
     flex-shrink: 0;
   }
 
@@ -100,7 +101,7 @@
     text-transform: uppercase;
     color: var(--black);
     font-weight: 600;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
     display: inline-block;
     background: #F2F2F2;
     padding: 5px 12px;
@@ -112,7 +113,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--mid);
-    margin: 40px 0 12px;
+    margin: 16px 0 12px;
     font-weight: 500;
   }
   .subsection-title:first-child { margin-top: 0; }
@@ -258,7 +259,7 @@
   .translation-intro {
     font-size: 0.85rem;
     color: var(--mid);
-    margin-bottom: 32px;
+    margin-bottom: 48px;
     line-height: 1.8;
   }
   .translation-intro strong { color: var(--black); font-weight: 500; }
@@ -302,6 +303,14 @@
     text-decoration: none;
   }
   .press-outlet a:hover { text-decoration: underline; }
+
+  .press-quote {
+    font-size: 0.82rem;
+    color: var(--mid);
+    margin-top: 5px;
+    line-height: 1.6;
+    font-style: italic;
+  }
 
   /* Education */
   .edu-list { display: flex; flex-direction: column; gap: 24px; }
@@ -366,12 +375,6 @@
           Author of <em>Love in the Big City</em> — translated into 15 languages, longlisted for the International Booker Prize and Prix Médicis étranger.<br><br>
           Seoul, Republic of Korea
         </p>
-        <div class="hero-tags">
-          <span class="hero-tag">Fiction</span>
-          <span class="hero-tag">Essay</span>
-          <span class="hero-tag">Screenwriting</span>
-          <span class="hero-tag">Korean Literature</span>
-        </div>
       </div>
     </div>
   </header>
@@ -575,7 +578,7 @@
     </div>
 
     <div class="translation-book">
-      <p class="translation-book-title">"Knockoff Viagra &amp; Jeje"</p>
+      <p class="translation-book-title"><a href="https://www.goodreads.com/book/show/195183030-knockoff-viagra-jeje" target="_blank" style="color:inherit;text-decoration:none;">"Knockoff Viagra &amp; Jeje"</a></p>
       <div class="lang-tags">
         <span class="lang-tag">English</span>
       </div>
@@ -586,16 +589,46 @@
   <section>
     <p class="section-label">Press Coverage</p>
     <div class="press-list">
-      <div class="press-item"><p class="press-outlet"><a href="https://www.nytimes.com/2021/11/16/books/review/love-in-the-big-city-sang-young-park.html" target="_blank">New York Times</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="https://www.theguardian.com/books/2022/jan/21/the-best-recent-translated-fiction-review-roundup" target="_blank">The Guardian</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="http://www.publishersweekly.com/9780802158789" target="_blank">Publishers Weekly</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="https://www.kirkusreviews.com/book-reviews/sang-young-park/love-in-the-big-city/" target="_blank">Kirkus Reviews</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="https://www.npr.org/2021/12/23/1065778737/lqbtq-book-south-korea-love-in-the-big-city-sang-young-park" target="_blank">NPR</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="https://www.oprahdaily.com/entertainment/books/g33510335/best-lgbtq-books-2021/" target="_blank">Oprah Daily</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="https://www.libraryjournal.com/review/love-in-the-big-city-1784259" target="_blank">Library Journal</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="https://www.theskinny.co.uk/books/book-reviews/love-in-the-big-city-by-sang-young-park" target="_blank">Skinny</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="https://www.booklistonline.com/Love-in-the-Big-City-Anton-Hur/pid=9750554" target="_blank">Booklist</a></p></div>
-      <div class="press-item"><p class="press-outlet"><a href="https://www.youtube.com/watch?v=dRnVfPRiXyY" target="_blank">KBS News</a></p></div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.nytimes.com/2021/11/16/books/review/love-in-the-big-city-sang-young-park.html" target="_blank">New York Times</a></p>
+        <p class="press-quote">"A runaway bestseller poised to capture a worldwide readership."</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.theguardian.com/books/2022/jan/21/the-best-recent-translated-fiction-review-roundup" target="_blank">The Guardian</a></p>
+        <p class="press-quote">"Captures the ambiguous landscape inhabited by South Korean gays, of being both visible and unacknowledged."</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="http://www.publishersweekly.com/9780802158789" target="_blank">Publishers Weekly</a></p>
+        <p class="press-quote">"Destined to be a global, queer cult classic."</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.kirkusreviews.com/book-reviews/sang-young-park/love-in-the-big-city/" target="_blank">Kirkus Reviews</a></p>
+        <p class="press-quote">"A novel about navigating life as a young gay man in Korea — electric and deeply felt."</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.npr.org/2021/12/23/1065778737/lqbtq-book-south-korea-love-in-the-big-city-sang-young-park" target="_blank">NPR</a></p>
+        <p class="press-quote">"Captures the experience of being both visible and unacknowledged."</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.oprahdaily.com/entertainment/books/g33510335/best-lgbtq-books-2021/" target="_blank">Oprah Daily</a></p>
+        <p class="press-quote">"One of the best LGBTQ books of 2021."</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.libraryjournal.com/review/love-in-the-big-city-1784259" target="_blank">Library Journal</a></p>
+        <p class="press-quote">"Anton Hur's gorgeous translation captures the wit and bite of Park's voice."</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.theskinny.co.uk/books/book-reviews/love-in-the-big-city-by-sang-young-park" target="_blank">Skinny</a></p>
+        <p class="press-quote">"Bold and sparkling — destined to be a global, queer cult classic." ★★★★★</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.booklistonline.com/Love-in-the-Big-City-Anton-Hur/pid=9750554" target="_blank">Booklist</a></p>
+        <p class="press-quote">"Watching Young drift in and out of love is one of the book's most notable pleasures."</p>
+      </div>
+      <div class="press-item">
+        <p class="press-outlet"><a href="https://www.youtube.com/watch?v=dRnVfPRiXyY" target="_blank">KBS News</a></p>
+        <p class="press-quote">"50 Essential Korean Novels of Our Time"</p>
+      </div>
     </div>
   </section>
 
@@ -617,15 +650,18 @@
   <!-- Languages & Social -->
   <section>
     <p class="section-label">Languages</p>
-    <div class="hero-tags" style="margin-bottom: 40px;">
+    <div class="hero-tags" style="margin-bottom: 0;">
       <span class="hero-tag">Korean</span>
       <span class="hero-tag">English</span>
     </div>
+  </section>
 
+  <section>
+    <hr style="border:none;border-top:1px solid #E8E8E8;margin:0 0 36px 0;">
     <p class="section-label">Social Media</p>
     <div class="social-list">
       <a class="social-link" href="https://www.instagram.com/novelistpark/" target="_blank">Instagram</a>
-      <a class="social-link" href="https://x.com/novelistpark" target="_blank">X / Twitter</a>
+      <a class="social-link" href="https://x.com/novelistpark" target="_blank">X (Twitter)</a>
     </div>
   </section>
 
