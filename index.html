@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sang Young Park</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #111111;
+    --mid: #555555;
+    --light: #999999;
+    --rule: #E8E8E8;
+    --bg: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 80px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .hero-inner {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .hero-photo {
+    width: 108px;
+    height: 108px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .hero-text { flex: 1; }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero-desc {
+    font-size: 0.875rem;
+    color: var(--mid);
+    line-height: 1.8;
+  }
+
+  .hero-desc strong { color: var(--black); font-weight: 500; }
+  .hero-desc em { font-style: italic; }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 20px;
+  }
+
+  .hero-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--light);
+    border: 1px solid var(--rule);
+    padding: 3px 10px;
+    border-radius: 2px;
+  }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--black);
+    font-weight: 600;
+    margin-bottom: 32px;
+    display: inline-block;
+    background: #F2F2F2;
+    padding: 5px 12px;
+    border-radius: 2px;
+  }
+
+  .subsection-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin: 32px 0 12px;
+    font-weight: 500;
+  }
+  .subsection-title:first-child { margin-top: 0; }
+
+  /* Contact */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .contact-item-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 6px;
+  }
+
+  .contact-item-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .contact-item-name a {
+    color: var(--black);
+    text-decoration: none;
+  }
+  .contact-item-name a:hover { text-decoration: underline; }
+
+  .contact-item-email {
+    font-size: 0.85rem;
+    color: var(--mid);
+    text-decoration: none;
+  }
+  .contact-item-email:hover { color: var(--black); }
+
+  /* Books */
+  .book-list { display: flex; flex-direction: column; }
+
+  .book-item {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .book-item:last-child { border-bottom: none; }
+
+  .book-year {
+    font-size: 0.75rem;
+    color: var(--light);
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+    width: 36px;
+  }
+
+  .book-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    transition: font-style 0.15s ease;
+    flex: 1;
+  }
+  .book-item:hover .book-title { font-style: italic; }
+
+  .book-type {
+    font-size: 0.7rem;
+    color: var(--light);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  /* Awards */
+  .awards-list { display: flex; flex-direction: column; }
+
+  .award-item {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .award-item:last-child { border-bottom: none; }
+
+  .award-name {
+    font-size: 0.9rem;
+    flex: 1;
+  }
+
+  .award-name a {
+    color: var(--black);
+    text-decoration: none;
+  }
+  .award-name a:hover { text-decoration: underline; }
+
+  .award-status {
+    font-size: 0.7rem;
+    color: var(--light);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .award-status.winner { color: var(--mid); font-weight: 500; }
+
+  /* Media */
+  .media-list { display: flex; flex-direction: column; }
+
+  .media-item {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .media-item:last-child { border-bottom: none; }
+
+  .media-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    flex: 1;
+  }
+
+  .media-title a {
+    color: var(--black);
+    text-decoration: none;
+  }
+  .media-title a:hover { text-decoration: underline; }
+
+  .media-role {
+    font-size: 0.7rem;
+    color: var(--light);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  /* Translations */
+  .translation-intro {
+    font-size: 0.85rem;
+    color: var(--mid);
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+  .translation-intro strong { color: var(--black); font-weight: 500; }
+
+  .translation-book { margin-bottom: 28px; }
+  .translation-book:last-child { margin-bottom: 0; }
+
+  .translation-book-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+
+  .lang-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .lang-tag {
+    font-size: 0.7rem;
+    color: var(--mid);
+    border: 1px solid var(--rule);
+    padding: 3px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  /* Press */
+  .press-list { display: flex; flex-direction: column; }
+
+  .press-item {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .press-item:last-child { border-bottom: none; }
+
+  .press-outlet {
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .press-outlet a {
+    color: var(--black);
+    text-decoration: none;
+  }
+  .press-outlet a:hover { text-decoration: underline; }
+
+  /* Education */
+  .edu-list { display: flex; flex-direction: column; gap: 24px; }
+
+  .edu-degree {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+
+  .edu-field {
+    font-size: 0.85rem;
+    color: var(--mid);
+  }
+
+  /* Social */
+  .social-list { display: flex; gap: 24px; }
+
+  .social-link {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .social-link:hover { color: var(--black); border-color: var(--black); }
+
+  footer {
+    padding: 40px 0;
+    font-size: 0.75rem;
+    color: var(--light);
+  }
+
+  @media (max-width: 600px) {
+    .hero-inner { flex-direction: column; gap: 24px; }
+    .hero-name { font-size: 2.2rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+    .wrap { padding: 0 20px; }
+    .hero { padding: 48px 0 40px; }
+    section { padding: 40px 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .book-title { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="hero-photo" src="photo.jpeg" alt="Sang Young Park">
+      <div class="hero-text">
+        <h1 class="hero-name">Sang Young Park</h1>
+        <p class="hero-desc">
+          <strong>Novelist, Screenwriter, Essayist</strong><br>
+          Author of <em>Love in the Big City</em> — translated into 15 languages,<br>
+          longlisted for the International Booker Prize and Prix Médicis étranger.<br><br>
+          Seoul, Republic of Korea
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag">Fiction</span>
+          <span class="hero-tag">Essay</span>
+          <span class="hero-tag">Screenwriting</span>
+          <span class="hero-tag">Korean Literature</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact -->
+  <section>
+    <p class="section-label">Contact</p>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-item-label">International</p>
+        <p class="contact-item-name"><a href="https://rcwlitagency.com/clients/sang-young-park" target="_blank">RCW Literary Agency</a></p>
+        <a class="contact-item-email" href="mailto:niktaa@rcwlitagency.com">niktaa@rcwlitagency.com</a>
+      </div>
+      <div>
+        <p class="contact-item-label">Korea</p>
+        <p class="contact-item-name">국내 섭외 및 기타 업무</p>
+        <a class="contact-item-email" href="mailto:jiin.choi@influential.co.kr">jiin.choi@influential.co.kr</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section>
+    <p class="section-label">Work</p>
+
+    <p class="subsection-title">Books</p>
+    <div class="book-list">
+      <div class="book-item">
+        <span class="book-year">2023</span>
+        <span class="book-title">Pause in the Moment</span>
+        <span class="book-type">Essay collection</span>
+      </div>
+      <div class="book-item">
+        <span class="book-year">2022</span>
+        <span class="book-title">On Truth</span>
+        <span class="book-type">Novel</span>
+      </div>
+      <div class="book-item">
+        <span class="book-year">2021</span>
+        <span class="book-title">Lie Like Lines</span>
+        <span class="book-type">Novel</span>
+      </div>
+      <div class="book-item">
+        <span class="book-year">2020</span>
+        <span class="book-title">No Snaking Tonight</span>
+        <span class="book-type">Memoir</span>
+      </div>
+      <div class="book-item">
+        <span class="book-year">2019</span>
+        <span class="book-title">Love in the Big City</span>
+        <span class="book-type">Novel</span>
+      </div>
+      <div class="book-item">
+        <span class="book-year">2018</span>
+        <span class="book-title">The Tears of an Unknown Artist, or Zaytun Pasta</span>
+        <span class="book-type">Short stories</span>
+      </div>
+    </div>
+
+    <p class="subsection-title">Drama</p>
+    <div class="book-list">
+      <div class="book-item">
+        <span class="book-year">2024</span>
+        <span class="book-title">Love in the Big City</span>
+        <span class="book-type">Series</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section>
+    <p class="section-label">Awards</p>
+    <div class="awards-list">
+      <div class="award-item">
+        <span class="award-name"><a href="https://www.livreshebdo.fr/article/la-premiere-selection-du-prix-medicis-2024" target="_blank">Prix Médicis étranger</a></span>
+        <span class="award-status">Longlisted</span>
+      </div>
+      <div class="award-item">
+        <span class="award-name"><a href="https://thebookerprizes.com/the-booker-library/books/love-in-the-big-city" target="_blank">International Booker Prize</a></span>
+        <span class="award-status">Longlisted</span>
+      </div>
+      <div class="award-item">
+        <span class="award-name"><a href="https://dublinliteraryaward.ie/the-library/authors/sang-young-park/" target="_blank">Dublin Literary Award</a></span>
+        <span class="award-status">Longlisted</span>
+      </div>
+      <div class="award-item">
+        <span class="award-name"><a href="https://www.changbi.com/searchResult?searchCategory=books&keyword=%EC%8B%A0%EB%8F%99%EC%97%BD%EB%AC%B8%ED%95%99%EC%83%81&page=1" target="_blank">Sin Dongyup Prize for Literature</a></span>
+        <span class="award-status winner">Winner</span>
+      </div>
+      <div class="award-item">
+        <span class="award-name"><a href="https://www.kwnews.co.kr/page/view/2019091500000000115" target="_blank">Heo Gyun Literary Award</a></span>
+        <span class="award-status winner">Winner</span>
+      </div>
+      <div class="award-item">
+        <span class="award-name"><a href="https://www.khan.co.kr/culture/book/article/201901311541001" target="_blank">Young Writer Award</a></span>
+        <span class="award-status winner">Grand Prize</span>
+      </div>
+      <div class="award-item">
+        <span class="award-name"><a href="https://www.hani.co.kr/arti/culture/book/774846.html" target="_blank">Munhakdongne New Writer Award</a></span>
+        <span class="award-status winner">Winner</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Adaptations -->
+  <section>
+    <p class="section-label">Media Adaptations</p>
+
+    <p class="subsection-title">Movie</p>
+    <div class="media-list">
+      <div class="media-item">
+        <span class="media-title"><a href="https://www.imdb.com/title/tt33022813/" target="_blank">Love in the Big City</a></span>
+        <span class="media-role">Original Story</span>
+      </div>
+    </div>
+
+    <p class="subsection-title">Drama</p>
+    <div class="media-list">
+      <div class="media-item">
+        <span class="media-title"><a href="https://www.imdb.com/title/tt30143510/" target="_blank">Love in the Big City</a></span>
+        <span class="media-role">Show Runner</span>
+      </div>
+    </div>
+
+    <p class="subsection-title">Theatre</p>
+    <div class="media-list">
+      <div class="media-item">
+        <span class="media-title"><a href="https://www.ntck.or.kr/ko/performance/info/256993" target="_blank">The Tears of an Unknown Artist, or Zaytun Pasta</a></span>
+        <span class="media-role">Original Story</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Translated Edition -->
+  <section>
+    <p class="section-label">Translated Edition</p>
+    <p class="translation-intro">Works translated into <strong>15+ languages</strong> across <strong>20+ countries</strong>.</p>
+
+    <div class="translation-book">
+      <p class="translation-book-title">Love in the Big City</p>
+      <div class="lang-tags">
+        <span class="lang-tag">English</span>
+        <span class="lang-tag">Japanese</span>
+        <span class="lang-tag">Taiwanese Mandarin</span>
+        <span class="lang-tag">Spanish</span>
+        <span class="lang-tag">Dutch</span>
+        <span class="lang-tag">French</span>
+        <span class="lang-tag">German</span>
+        <span class="lang-tag">Italian</span>
+        <span class="lang-tag">Polish</span>
+        <span class="lang-tag">Swedish</span>
+        <span class="lang-tag">Romanian</span>
+        <span class="lang-tag">Thai</span>
+        <span class="lang-tag">Vietnamese</span>
+        <span class="lang-tag">Portuguese</span>
+        <span class="lang-tag">Danish</span>
+      </div>
+    </div>
+
+    <div class="translation-book">
+      <p class="translation-book-title">Lie Like Lines</p>
+      <div class="lang-tags">
+        <span class="lang-tag">Dutch</span>
+        <span class="lang-tag">Taiwanese Mandarin</span>
+        <span class="lang-tag">Spanish</span>
+        <span class="lang-tag">Italian</span>
+        <span class="lang-tag">Polish</span>
+      </div>
+    </div>
+
+    <div class="translation-book">
+      <p class="translation-book-title">On Truth</p>
+      <div class="lang-tags">
+        <span class="lang-tag">Italian</span>
+        <span class="lang-tag">Taiwanese Mandarin</span>
+        <span class="lang-tag">Spanish</span>
+      </div>
+    </div>
+
+    <div class="translation-book">
+      <p class="translation-book-title">No Snaking Tonight</p>
+      <div class="lang-tags">
+        <span class="lang-tag">Taiwanese Mandarin</span>
+        <span class="lang-tag">Chinese</span>
+      </div>
+    </div>
+
+    <div class="translation-book">
+      <p class="translation-book-title">The Tears of an Unknown Artist, or Zaytun Pasta</p>
+      <div class="lang-tags">
+        <span class="lang-tag">English</span>
+        <span class="lang-tag">Taiwanese Mandarin</span>
+      </div>
+    </div>
+
+    <div class="translation-book">
+      <p class="translation-book-title">Pause in the Moment</p>
+      <div class="lang-tags">
+        <span class="lang-tag">Taiwanese Mandarin</span>
+      </div>
+    </div>
+
+    <div class="translation-book">
+      <p class="translation-book-title">"Knockoff Viagra &amp; Jeje"</p>
+      <div class="lang-tags">
+        <span class="lang-tag">English</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press Coverage -->
+  <section>
+    <p class="section-label">Press Coverage</p>
+    <div class="press-list">
+      <div class="press-item"><p class="press-outlet"><a href="https://www.nytimes.com/2021/11/16/books/review/love-in-the-big-city-sang-young-park.html" target="_blank">New York Times</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="https://www.theguardian.com/books/2022/jan/21/the-best-recent-translated-fiction-review-roundup" target="_blank">The Guardian</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="http://www.publishersweekly.com/9780802158789" target="_blank">Publishers Weekly</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="https://www.kirkusreviews.com/book-reviews/sang-young-park/love-in-the-big-city/" target="_blank">Kirkus Reviews</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="https://www.npr.org/2021/12/23/1065778737/lqbtq-book-south-korea-love-in-the-big-city-sang-young-park" target="_blank">NPR</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="https://www.oprahdaily.com/entertainment/books/g33510335/best-lgbtq-books-2021/" target="_blank">Oprah Daily</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="https://www.libraryjournal.com/review/love-in-the-big-city-1784259" target="_blank">Library Journal</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="https://www.theskinny.co.uk/books/book-reviews/love-in-the-big-city-by-sang-young-park" target="_blank">Skinny</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="https://www.booklistonline.com/Love-in-the-Big-City-Anton-Hur/pid=9750554" target="_blank">Booklist</a></p></div>
+      <div class="press-item"><p class="press-outlet"><a href="https://www.youtube.com/watch?v=dRnVfPRiXyY" target="_blank">KBS News</a></p></div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <p class="section-label">Education</p>
+    <div class="edu-list">
+      <div>
+        <p class="edu-degree">Dongguk University — MA</p>
+        <p class="edu-field">Creative Writing</p>
+      </div>
+      <div>
+        <p class="edu-degree">Sungkyunkwan University — BA</p>
+        <p class="edu-field">Media Communication, French</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages & Social -->
+  <section>
+    <p class="section-label">Languages</p>
+    <div class="hero-tags" style="margin-bottom: 40px;">
+      <span class="hero-tag">Korean</span>
+      <span class="hero-tag">English</span>
+    </div>
+
+    <p class="section-label">Social Media</p>
+    <div class="social-list">
+      <a class="social-link" href="https://www.instagram.com/novelistpark/" target="_blank">Instagram</a>
+      <a class="social-link" href="https://x.com/novelistpark" target="_blank">X / Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Sang Young Park</p>
+  </footer>
+
+</div>
+</body>
+</html>
