@@ -3,7 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sang Young Park</title>
+<title>Sang Young Park — Novelist, Screenwriter, Essayist</title>
+<meta name="description" content="Official website of Sang Young Park, author of Love in the Big City and The Woman with a Straw Crown. Books, awards, translations, adaptations, press, and contact information.">
+<link rel="canonical" href="https://novelistpark.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://novelistpark.github.io/">
+<meta property="og:title" content="Sang Young Park — Novelist, Screenwriter, Essayist">
+<meta property="og:description" content="Author of Love in the Big City and The Woman with a Straw Crown. Translated into 16 languages and available in over 30 countries and territories.">
+<meta property="og:image" content="https://novelistpark.github.io/photo.jpeg">
+<meta property="og:image:alt" content="Portrait of author Sang Young Park">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sang Young Park — Novelist, Screenwriter, Essayist">
+<meta name="twitter:description" content="Official website of Sang Young Park, author of Love in the Big City.">
+<meta name="twitter:image" content="https://novelistpark.github.io/photo.jpeg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sang Young Park",
+  "url": "https://novelistpark.github.io/",
+  "image": "https://novelistpark.github.io/photo.jpeg",
+  "jobTitle": ["Novelist", "Screenwriter", "Essayist"],
+  "homeLocation": {"@type": "Place", "name": "Seoul, Republic of Korea"},
+  "sameAs": [
+    "https://rcwlitagency.com/clients/sang-young-park",
+    "https://www.instagram.com/novelistpark/",
+    "https://x.com/novelistpark"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -23,6 +51,11 @@
     color: var(--black);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+  }
+
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 4px;
   }
 
   .wrap {
@@ -66,11 +99,35 @@
   .hero-desc {
     font-size: 0.875rem;
     color: var(--mid);
-    line-height: 1.8;
+    line-height: 1.65;
   }
 
   .hero-desc strong { color: var(--black); font-weight: 500; }
   .hero-desc em { font-style: italic; }
+  .hero-desc a { color: inherit; text-decoration: none; }
+  .hero-desc a:hover { text-decoration: underline; }
+
+  .hero-location {
+    display: block;
+    margin-top: 14px;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .site-nav a {
+    color: var(--mid);
+    font-size: 0.68rem;
+    letter-spacing: 0.09em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-nav a:hover { color: var(--black); text-decoration: underline; }
 
   .hero-tags {
     display: flex;
@@ -117,6 +174,82 @@
     font-weight: 500;
   }
   .subsection-title:first-child { margin-top: 0; }
+
+  /* Featured work */
+  .featured-work {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .featured-cover-link {
+    display: block;
+    line-height: 0;
+  }
+
+  .featured-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .featured-kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 8px;
+  }
+
+  .featured-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .featured-copy, .about-copy {
+    font-size: 0.86rem;
+    color: var(--mid);
+    line-height: 1.85;
+  }
+
+  .text-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--black);
+    font-size: 0.76rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--light);
+  }
+  .text-link:hover { border-bottom-color: var(--black); }
+
+  /* Appearances */
+  .appearance-list { display: flex; flex-direction: column; }
+  .appearance-item {
+    display: grid;
+    grid-template-columns: 42px 1fr auto;
+    gap: 16px;
+    align-items: baseline;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .appearance-item:last-child { border-bottom: none; }
+  .appearance-year { font-size: 0.75rem; color: var(--light); }
+  .appearance-name { font-size: 0.88rem; }
+  .appearance-name a { color: var(--black); text-decoration: none; }
+  .appearance-name a:hover { text-decoration: underline; }
+  .appearance-place {
+    font-size: 0.68rem;
+    color: var(--light);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: right;
+  }
 
   /* Contact */
   .contact-grid {
@@ -191,6 +324,30 @@
   .book-item:hover .book-title { font-style: italic; }
 
   .book-title a:hover { text-decoration: underline; }
+
+  .hover-preview {
+    position: fixed;
+    z-index: 1000;
+    width: 172px;
+    max-height: 260px;
+    object-fit: contain;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px) scale(0.98);
+    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
+  }
+
+  .hover-preview.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  [data-preview] { cursor: pointer; }
 
   .book-type {
     font-size: 0.7rem;
@@ -291,7 +448,10 @@
     padding: 3px 10px;
     border-radius: 2px;
     letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease;
   }
+  .lang-tag[href]:hover { color: var(--black); border-color: var(--mid); }
 
   /* Press */
   .press-list { display: flex; flex-direction: column; }
@@ -363,38 +523,54 @@
     .wrap { padding: 0 20px; }
     .hero { padding: 48px 0 40px; }
     section { padding: 28px 0 56px; }
+    .featured-work { grid-template-columns: 96px 1fr; gap: 20px; }
+    .appearance-item { grid-template-columns: 38px 1fr; }
+    .appearance-place { grid-column: 2; text-align: left; }
+    .hover-preview { display: none; }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .book-title { transition: none; }
+    .hover-preview { transition: none; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#awards">Awards</a>
+    <a href="#adaptations">Adaptations</a>
+    <a href="#appearances">Appearances</a>
+    <a href="#translations">Translations</a>
+    <a href="#press">Press</a>
+  </nav>
+
   <!-- Hero -->
   <header class="hero">
     <div class="hero-inner">
-      <img class="hero-photo" src="photo.jpeg" alt="Sang Young Park">
+      <img class="hero-photo" src="photo.jpeg" alt="Portrait of author Sang Young Park">
       <div class="hero-text">
         <h1 class="hero-name">Sang Young Park</h1>
         <p class="hero-desc">
           <strong>Novelist, Screenwriter, Essayist</strong><br>
-          Author of <em>Love in the Big City</em> and <em>The Woman with a Straw Crown</em> · Translated into 16 languages · International Booker Prize longlist · Prix Médicis étranger longlist<br><br>
-          Seoul, Republic of Korea
+          Author of the novel <a href="https://thebookerprizes.com/the-booker-library/books/love-in-the-big-city" target="_blank" rel="noopener noreferrer" data-preview="cover-love-in-the-big-city-uk.jpg" data-preview-alt="UK cover of Love in the Big City"><em>Love in the Big City</em></a> and writer and creator of its television adaptation · Translated into 16 languages · International Booker Prize longlist
+          <span class="hero-location">Seoul, Republic of Korea</span>
         </p>
       </div>
     </div>
   </header>
 
   <!-- Contact -->
-  <section>
+  <section id="contact">
     <p class="section-label">Contact</p>
     <div class="contact-grid">
       <div>
         <p class="contact-item-label">International</p>
-        <p class="contact-item-name"><a href="https://rcwlitagency.com/clients/sang-young-park" target="_blank">RCW Literary Agency</a></p>
+        <p class="contact-item-name"><a href="https://rcwlitagency.com/clients/sang-young-park" target="_blank" rel="noopener noreferrer" data-preview="rcw-sang-young-park-profile.png" data-preview-alt="Sang Young Park profile at RCW Literary Agency" data-preview-width="420">RCW Literary Agency</a></p>
         <p class="contact-item-person">Niktaa Amirkhalili</p>
         <a class="contact-item-email" href="mailto:niktaa@rcwlitagency.com">niktaa@rcwlitagency.com</a>
       </div>
@@ -407,43 +583,65 @@
     </div>
   </section>
 
+  <!-- Latest work -->
+  <section id="latest">
+    <p class="section-label">Latest</p>
+    <div class="featured-work">
+      <a class="featured-cover-link" href="https://rcwlitagency.com/books/the-woman-with-a-straw-crown" target="_blank" rel="noopener noreferrer" aria-label="View book details for The Woman with a Straw Crown">
+        <img class="featured-cover" src="cover-straw-crown.png" alt="Korean cover of The Woman with a Straw Crown by Sang Young Park" width="774" height="1106">
+      </a>
+      <div>
+        <p class="featured-kicker">Latest Novel</p>
+        <h2 class="featured-title"><em>The Woman with a Straw Crown</em></h2>
+        <p class="featured-copy">The latest novel by Sang Young Park, published in Korea in July 2026. A propulsive mystery spanning Korea and Japan, where a Zainichi woman’s death unearths a chaebol dynasty’s buried history.</p>
+        <a class="text-link" href="https://rcwlitagency.com/books/the-woman-with-a-straw-crown" target="_blank" rel="noopener noreferrer">Book details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <p class="section-label">About</p>
+    <p class="about-copy">Sang Young Park is a South Korean novelist, screenwriter, and essayist based in Seoul. With wit, emotional precision, and an unsparing eye for contemporary life, his work explores intimacy, identity, family, and the changing textures of urban experience. His bestselling novel <em>Love in the Big City</em> was longlisted for the International Booker Prize, the Dublin Literary Award, and the Prix Médicis étranger, and was adapted for both film and television. Park wrote and created the television series, which was broadcast globally in over 190 countries. His works have been translated into 16 languages and are available in over 30 countries and territories.</p>
+  </section>
+
   <!-- Work -->
-  <section>
+  <section id="work">
     <p class="section-label">Work</p>
 
     <p class="subsection-title">Books</p>
     <div class="book-list">
-      <div class="book-item">
+      <div class="book-item" data-preview="cover-straw-crown.png" data-preview-alt="Cover of The Woman with a Straw Crown">
         <span class="book-year">2026</span>
-        <span class="book-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398344057" target="_blank" style="color:inherit;text-decoration:none;">The Woman with a Straw Crown</a></span>
+        <span class="book-title"><a href="https://rcwlitagency.com/books/the-woman-with-a-straw-crown" target="_blank" style="color:inherit;text-decoration:none;">The Woman with a Straw Crown</a></span>
         <span class="book-type">Novel</span>
       </div>
-      <div class="book-item">
+      <div class="book-item" data-preview="cover-pure-rest.jpg" data-preview-alt="Cover of 100% Pure Rest">
         <span class="book-year">2023</span>
-        <span class="book-title"><a href="https://www.yes24.com/product/goods/119741395" target="_blank" style="color:inherit;text-decoration:none;">Pause in the Moment</a></span>
+        <span class="book-title"><a href="https://rcwlitagency.com/books/100-pure-rest" target="_blank" style="color:inherit;text-decoration:none;">100% Pure Rest</a></span>
         <span class="book-type">Essay collection</span>
       </div>
-      <div class="book-item">
+      <div class="book-item" data-preview="cover-on-trust.jpg" data-preview-alt="Cover of On Trust">
         <span class="book-year">2022</span>
-        <span class="book-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298087324" target="_blank" style="color:inherit;text-decoration:none;">On Truth</a></span>
+        <span class="book-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=298087324" target="_blank" style="color:inherit;text-decoration:none;">On Trust</a></span>
         <span class="book-type">Novel</span>
       </div>
-      <div class="book-item">
+      <div class="book-item" data-preview="cover-lie-like-lines.jpg" data-preview-alt="Cover of Lie Like Lines">
         <span class="book-year">2021</span>
-        <span class="book-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280318207" target="_blank" style="color:inherit;text-decoration:none;">Lie Like Lines</a></span>
+        <span class="book-title"><a href="https://rcwlitagency.com/books/lie-like-lines" target="_blank" style="color:inherit;text-decoration:none;">Lie Like Lines</a></span>
         <span class="book-type">Novel</span>
       </div>
-      <div class="book-item">
+      <div class="book-item" data-preview="cover-no-snacking-tonight.jpg" data-preview-alt="Cover of No Snacking Tonight">
         <span class="book-year">2020</span>
-        <span class="book-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=234565562" target="_blank" style="color:inherit;text-decoration:none;">No Snaking Tonight</a></span>
+        <span class="book-title"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=234565562" target="_blank" style="color:inherit;text-decoration:none;">No Snacking Tonight</a></span>
         <span class="book-type">Memoir</span>
       </div>
-      <div class="book-item">
+      <div class="book-item" data-preview="cover-love-in-the-big-city-uk.jpg" data-preview-alt="UK cover of Love in the Big City">
         <span class="book-year">2019</span>
-        <span class="book-title"><a href="https://www.goodreads.com/book/show/57500766-love-in-the-big-city" target="_blank" style="color:inherit;text-decoration:none;">Love in the Big City</a></span>
+        <span class="book-title"><a href="https://rcwlitagency.com/books/love-in-the-big-city" target="_blank" style="color:inherit;text-decoration:none;">Love in the Big City</a></span>
         <span class="book-type">Novel</span>
       </div>
-      <div class="book-item">
+      <div class="book-item" data-preview="cover-zaytun-pasta.jpg" data-preview-alt="Cover of The Tears of an Unknown Artist, or Zaytun Pasta">
         <span class="book-year">2018</span>
         <span class="book-title"><a href="https://wordswithoutborders.org/read/article/2019-02/february-2019-the-tears-of-an-unknown-artist-or-zaytun-pasta-sang-young-par/" target="_blank" style="color:inherit;text-decoration:none;">The Tears of an Unknown Artist, or Zaytun Pasta</a></span>
         <span class="book-type">Short stories</span>
@@ -452,7 +650,7 @@
 
     <p class="subsection-title">Drama</p>
     <div class="book-list">
-      <div class="book-item">
+      <div class="book-item" data-preview="poster-love-in-big-city-series.webp" data-preview-alt="Television series poster for Love in the Big City">
         <span class="book-year">2024</span>
         <span class="book-title"><a href="https://www.imdb.com/title/tt30143510/" target="_blank" style="color:inherit;text-decoration:none;">Love in the Big City</a></span>
         <span class="book-type">Series</span>
@@ -461,7 +659,7 @@
   </section>
 
   <!-- Awards -->
-  <section>
+  <section id="awards">
     <p class="section-label">Awards</p>
     <div class="awards-list">
       <div class="award-item">
@@ -481,6 +679,10 @@
         <span class="award-status winner">Winner</span>
       </div>
       <div class="award-item">
+        <span class="award-name"><a href="https://www.yna.co.kr/view/AKR20221018146500005" target="_blank" rel="noopener noreferrer">Booksellers’ Author of the Year</a></span>
+        <span class="award-status winner">Winner</span>
+      </div>
+      <div class="award-item">
         <span class="award-name"><a href="https://www.kwnews.co.kr/page/view/2019091500000000115" target="_blank">Heo Gyun Literary Award</a></span>
         <span class="award-status winner">Winner</span>
       </div>
@@ -496,12 +698,12 @@
   </section>
 
   <!-- Media Adaptations -->
-  <section>
+  <section id="adaptations">
     <p class="section-label">Media Adaptations</p>
 
     <p class="subsection-title">Movie</p>
     <div class="media-list">
-      <div class="media-item">
+      <div class="media-item" data-preview="poster-love-in-big-city-film.png" data-preview-alt="Film poster for Love in the Big City">
         <span class="media-title"><a href="https://www.imdb.com/title/tt33022813/" target="_blank">Love in the Big City</a></span>
         <span class="media-role">Original Story</span>
       </div>
@@ -509,9 +711,9 @@
 
     <p class="subsection-title">Drama</p>
     <div class="media-list">
-      <div class="media-item">
+      <div class="media-item" data-preview="poster-love-in-big-city-series.webp" data-preview-alt="Television series poster for Love in the Big City">
         <span class="media-title"><a href="https://www.imdb.com/title/tt30143510/" target="_blank">Love in the Big City</a></span>
-        <span class="media-role">Show Runner</span>
+        <span class="media-role">Writer &amp; Creator</span>
       </div>
     </div>
 
@@ -524,57 +726,104 @@
     </div>
   </section>
 
+  <!-- Selected international programs and festivals -->
+  <section id="appearances">
+    <p class="section-label">Selected International Appearances</p>
+    <div class="appearance-list">
+      <div class="appearance-item">
+        <span class="appearance-year">2026</span>
+        <span class="appearance-name"><a href="https://iwp.uiowa.edu/residency/participants" target="_blank" rel="noopener noreferrer">International Writing Program, University of Iowa</a></span>
+        <span class="appearance-place">Iowa City, USA</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">2026</span>
+        <span class="appearance-name"><a href="https://sibf.kr/page/13_seminar?gbn=2&amp;idx=124&amp;year=2026" target="_blank" rel="noopener noreferrer">Seoul International Book Fair</a></span>
+        <span class="appearance-place">Seoul, Korea</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">2026</span>
+        <span class="appearance-name"><a href="https://klwave.or.kr/klw/resources/4239/newsView.do" target="_blank" rel="noopener noreferrer">Los Angeles Times Festival of Books</a></span>
+        <span class="appearance-place">Los Angeles, USA</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">2025</span>
+        <span class="appearance-name"><a href="https://www.atlantide-festival.org/edition-2025/" target="_blank" rel="noopener noreferrer">Atlantide — Les Mots du Monde</a></span>
+        <span class="appearance-place">Nantes, France</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">2025</span>
+        <span class="appearance-name"><a href="https://www.littfest.se/program-2025/2025/3/14/krlek-i-seoul" target="_blank" rel="noopener noreferrer">Littfest — Umeå International Literature Festival</a></span>
+        <span class="appearance-place">Umeå, Sweden</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">2025</span>
+        <span class="appearance-name"><a href="https://eap.princeton.edu/events/conversation-sang-young-park-author-love-big-city" target="_blank" rel="noopener noreferrer">Princeton University</a> &amp; <a href="https://almanac.upenn.edu/at-penn-calendar/april-at-penn-2025" target="_blank" rel="noopener noreferrer">University of Pennsylvania</a> Book Talks</span>
+        <span class="appearance-place">Princeton &amp; Philadelphia, USA</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">2023</span>
+        <span class="appearance-name"><a href="https://research-portal.uea.ac.uk/en/activities/bclt-international-literary-translation-and-creative-writing-summ-4/" target="_blank" rel="noopener noreferrer">BCLT Literary Translation Summer School</a> — Author-in-Residence</span>
+        <span class="appearance-place">Norwich, UK</span>
+      </div>
+      <div class="appearance-item">
+        <span class="appearance-year">2023</span>
+        <span class="appearance-name"><a href="https://www.passaporta.be/en/calendar/meet-the-author-sang-young-park" target="_blank" rel="noopener noreferrer">Passa Porta Festival</a></span>
+        <span class="appearance-place">Brussels, Belgium</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Translated Edition -->
-  <section>
+  <section id="translations">
     <p class="section-label">Translated Edition</p>
-    <p class="translation-intro">Works translated into <strong>16+ languages</strong> across <strong>20+ countries</strong>.</p>
+    <p class="translation-intro">Works translated into <strong>16 languages</strong> and available in <strong>over 30 countries and territories</strong>.</p>
 
     <div class="translation-book">
       <p class="translation-book-title">Love in the Big City</p>
       <div class="lang-tags">
-        <span class="lang-tag">English</span>
-        <span class="lang-tag">Japanese</span>
-        <span class="lang-tag">Taiwanese Mandarin</span>
-        <span class="lang-tag">Spanish</span>
-        <span class="lang-tag">Dutch</span>
-        <span class="lang-tag">French</span>
-        <span class="lang-tag">German</span>
-        <span class="lang-tag">Italian</span>
-        <span class="lang-tag">Polish</span>
-        <span class="lang-tag">Swedish</span>
-        <span class="lang-tag">Romanian</span>
-        <span class="lang-tag">Thai</span>
-        <span class="lang-tag">Vietnamese</span>
-        <span class="lang-tag">Portuguese</span>
-        <span class="lang-tag">Danish</span>
-        <span class="lang-tag">Ukrainian</span>
+        <a class="lang-tag" href="https://groveatlantic.com/book/love-in-the-big-city/" target="_blank" rel="noopener noreferrer">English</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/29496" target="_blank" rel="noopener noreferrer">Japanese</a>
+        <a class="lang-tag" href="https://www.books.com.tw/products/0011006603" target="_blank" rel="noopener noreferrer">Taiwanese Mandarin</a>
+        <a class="lang-tag" href="https://www.libreriadante.com.mx/product-page/amor-en-la-gran-ciudad" target="_blank" rel="noopener noreferrer">Spanish</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/405605" target="_blank" rel="noopener noreferrer">Dutch</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/408900" target="_blank" rel="noopener noreferrer">French</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/405785" target="_blank" rel="noopener noreferrer">German</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/408860" target="_blank" rel="noopener noreferrer">Italian</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/409240" target="_blank" rel="noopener noreferrer">Polish</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/409688" target="_blank" rel="noopener noreferrer">Swedish</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/409897" target="_blank" rel="noopener noreferrer">Romanian</a>
+        <a class="lang-tag" href="https://amarinbooks.com/product/%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%B2%E0%B8%88%E0%B8%81%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B9%83%E0%B8%84%E0%B8%A3%E0%B9%84%E0%B8%A7%E0%B9%89/" target="_blank" rel="noopener noreferrer">Thai</a>
+        <a class="lang-tag" href="https://bennghe.com.vn/products/tinh-yeu-o-thanh-pho-lon-sang-young-park" target="_blank" rel="noopener noreferrer">Vietnamese</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/412459" target="_blank" rel="noopener noreferrer">Portuguese</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/409005" target="_blank" rel="noopener noreferrer">Danish</a>
+        <a class="lang-tag" href="https://foundation.anetta-publishers.com/books/305" target="_blank" rel="noopener noreferrer">Ukrainian</a>
       </div>
     </div>
 
     <div class="translation-book">
       <p class="translation-book-title">Lie Like Lines</p>
       <div class="lang-tags">
-        <span class="lang-tag">Dutch</span>
-        <span class="lang-tag">Taiwanese Mandarin</span>
-        <span class="lang-tag">Spanish</span>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/409788" target="_blank" rel="noopener noreferrer">Dutch</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/410032" target="_blank" rel="noopener noreferrer">Taiwanese Mandarin</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/413170" target="_blank" rel="noopener noreferrer">Spanish</a>
         <span class="lang-tag">Italian</span>
         <span class="lang-tag">Polish</span>
       </div>
     </div>
 
     <div class="translation-book">
-      <p class="translation-book-title">On Truth</p>
+      <p class="translation-book-title">On Trust</p>
       <div class="lang-tags">
-        <span class="lang-tag">Italian</span>
-        <span class="lang-tag">Taiwanese Mandarin</span>
+        <a class="lang-tag" href="https://www.rizzolilibri.it/libri/il-destino-e-nel-carattere/" target="_blank" rel="noopener noreferrer">Italian</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/414667" target="_blank" rel="noopener noreferrer">Taiwanese Mandarin</a>
         <span class="lang-tag">Spanish</span>
       </div>
     </div>
 
     <div class="translation-book">
-      <p class="translation-book-title">No Snaking Tonight</p>
+      <p class="translation-book-title">No Snacking Tonight</p>
       <div class="lang-tags">
-        <span class="lang-tag">Taiwanese Mandarin</span>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/413731" target="_blank" rel="noopener noreferrer">Taiwanese Mandarin</a>
         <span class="lang-tag">Chinese</span>
       </div>
     </div>
@@ -582,28 +831,28 @@
     <div class="translation-book">
       <p class="translation-book-title">The Tears of an Unknown Artist, or Zaytun Pasta</p>
       <div class="lang-tags">
-        <span class="lang-tag">English</span>
-        <span class="lang-tag">Taiwanese Mandarin</span>
+        <a class="lang-tag" href="https://wordswithoutborders.org/read/article/2019-02/february-2019-the-tears-of-an-unknown-artist-or-zaytun-pasta-sang-young-par/" target="_blank" rel="noopener noreferrer">English</a>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/413691" target="_blank" rel="noopener noreferrer">Taiwanese Mandarin</a>
       </div>
     </div>
 
     <div class="translation-book">
-      <p class="translation-book-title">Pause in the Moment</p>
+      <p class="translation-book-title">100% Pure Rest</p>
       <div class="lang-tags">
-        <span class="lang-tag">Taiwanese Mandarin</span>
+        <a class="lang-tag" href="https://library.ltikorea.or.kr/translatedbooks/415498" target="_blank" rel="noopener noreferrer">Taiwanese Mandarin</a>
       </div>
     </div>
 
     <div class="translation-book">
       <p class="translation-book-title"><a href="https://www.goodreads.com/book/show/195183030-knockoff-viagra-jeje" target="_blank" style="color:inherit;text-decoration:none;">"Knockoff Viagra &amp; Jeje"</a></p>
       <div class="lang-tags">
-        <span class="lang-tag">English</span>
+        <a class="lang-tag" href="https://www.goodreads.com/book/show/195183030-knockoff-viagra-jeje" target="_blank" rel="noopener noreferrer">English</a>
       </div>
     </div>
   </section>
 
   <!-- Press Coverage -->
-  <section>
+  <section id="press">
     <p class="section-label">Press Coverage</p>
     <div class="press-list">
       <div class="press-item">
@@ -633,18 +882,6 @@
       <div class="press-item">
         <p class="press-outlet"><a href="https://www.libraryjournal.com/review/love-in-the-big-city-1784259" target="_blank">Library Journal</a></p>
         <p class="press-quote">"Anton Hur's gorgeous translation captures the wit and bite of Park's voice."</p>
-      </div>
-      <div class="press-item">
-        <p class="press-outlet"><a href="https://www.theskinny.co.uk/books/book-reviews/love-in-the-big-city-by-sang-young-park" target="_blank">Skinny</a></p>
-        <p class="press-quote">"Bold and sparkling — destined to be a global, queer cult classic." ★★★★★</p>
-      </div>
-      <div class="press-item">
-        <p class="press-outlet"><a href="https://www.booklistonline.com/Love-in-the-Big-City-Anton-Hur/pid=9750554" target="_blank">Booklist</a></p>
-        <p class="press-quote">"Watching Young drift in and out of love is one of the book's most notable pleasures."</p>
-      </div>
-      <div class="press-item">
-        <p class="press-outlet"><a href="https://www.youtube.com/watch?v=dRnVfPRiXyY" target="_blank">KBS News</a></p>
-        <p class="press-quote">"50 Essential Korean Novels of Our Time"</p>
       </div>
     </div>
   </section>
@@ -686,5 +923,44 @@
   </footer>
 
 </div>
+<img class="hover-preview" id="hover-preview" src="" alt="" aria-hidden="true">
+<script>
+  (() => {
+    const preview = document.getElementById('hover-preview');
+    const items = document.querySelectorAll('[data-preview]');
+    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+    const placePreview = (x, y, previewWidth = 172) => {
+      const previewHeight = 260;
+      preview.style.left = `${Math.max(12, Math.min(x + 18, window.innerWidth - previewWidth - 12))}px`;
+      preview.style.top = `${Math.max(12, Math.min(y + 18, window.innerHeight - previewHeight - 12))}px`;
+    };
+
+    const showPreview = (item, x, y) => {
+      if (!canHover.matches) return;
+      const previewWidth = Number(item.dataset.previewWidth) || 172;
+      preview.style.width = `${previewWidth}px`;
+      preview.src = item.dataset.preview;
+      preview.alt = item.dataset.previewAlt || '';
+      placePreview(x, y, previewWidth);
+      preview.classList.add('is-visible');
+    };
+
+    const hidePreview = () => preview.classList.remove('is-visible');
+
+    items.forEach((item) => {
+      item.addEventListener('mouseenter', (event) => showPreview(item, event.clientX, event.clientY));
+      item.addEventListener('mousemove', (event) => placePreview(event.clientX, event.clientY, Number(item.dataset.previewWidth) || 172));
+      item.addEventListener('mouseleave', hidePreview);
+      item.addEventListener('focusin', () => {
+        const rect = item.getBoundingClientRect();
+        showPreview(item, rect.right, rect.top);
+      });
+      item.addEventListener('focusout', hidePreview);
+    });
+
+    canHover.addEventListener('change', hidePreview);
+  })();
+</script>
 </body>
 </html>
